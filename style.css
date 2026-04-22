@@ -1,32 +1,60 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   VARIÁVEIS (AULA 11)
+========================= */
+:root {
+    --cor-primaria: #1e293b;
+    --cor-secundaria: #38bdf8;
+    --cor-fundo: #f8fafc;
+    --cor-texto: #333;
+    --cor-branco: #ffffff;
+}
+
+/* =========================
+   BODY
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #e3f2fd, #f8fafc);
-    color: #333;
+    background: linear-gradient(135deg, #e3f2fd, var(--cor-fundo));
+    color: var(--cor-texto);
     line-height: 1.6;
     padding: 20px;
 }
 
-/* LAYOUT */
+/* =========================
+   LAYOUT
+========================= */
 main, header, footer {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 header {
-    background: #1e293b;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+header:hover {
+    transform: scale(1.01);
 }
 
 /* PERFIL */
@@ -37,62 +65,83 @@ header {
 }
 
 .perfil img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid var(--cor-branco);
 }
 
 /* TEXTO HEADER */
 header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 30px;
 }
 
-header p {
+.titulo {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+/* CONTATOS */
+.contatos p {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 5px;
 }
 
-header a {
-    color: #38bdf8;
+.contatos a {
+    color: var(--cor-secundaria);
     text-decoration: none;
+    transition: 0.3s;
 }
 
-header a:hover {
+.contatos a:hover {
     text-decoration: underline;
 }
 
 /* ÍCONES */
 .material-icons {
     font-size: 18px;
-    color: #38bdf8;
+    color: var(--cor-secundaria);
 }
 
-/* CARDS */
+/* =========================
+   GRID (FLEXBOX - AULA 10)
+========================= */
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+.grid .card {
+    flex: 1;
+}
+
+/* =========================
+   CARDS
+========================= */
 .card {
-    background: white;
+    background: var(--cor-branco);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
-    border-left: 5px solid #38bdf8;
+    border-left: 5px solid var(--cor-secundaria);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* TÍTULOS */
 .card h2 {
-    position: relative;
     margin-bottom: 10px;
-    color: #1e293b;
+    color: var(--cor-primaria);
+    position: relative;
 }
 
 .card h2::after {
@@ -100,7 +149,7 @@ header a:hover {
     display: block;
     width: 50px;
     height: 3px;
-    background: #38bdf8;
+    background: var(--cor-secundaria);
     margin-top: 5px;
 }
 
@@ -113,7 +162,30 @@ ul li {
     margin-bottom: 5px;
 }
 
-/* SKILLS */
+/* =========================
+   PROJETOS
+========================= */
+.projeto h3 {
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   SKILLS
+========================= */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -121,9 +193,9 @@ ul li {
 }
 
 .skills span {
-    background: #1e293b;
+    background: var(--cor-primaria);
     color: white;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 14px;
     transition: 0.3s;
@@ -131,35 +203,60 @@ ul li {
 }
 
 .skills span:hover {
-    background: #38bdf8;
-    transform: scale(1.05);
+    background: var(--cor-secundaria);
+    transform: scale(1.08);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     margin-top: 20px;
     color: #666;
 }
 
-/* SELEÇÃO */
+/* =========================
+   SELEÇÃO
+========================= */
 ::selection {
-    background: #38bdf8;
+    background: var(--cor-secundaria);
     color: white;
 }
 
-/* RESPONSIVO */
+/* =========================
+   RESPONSIVIDADE (AULA 11)
+========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+    .grid {
+        flex-direction: column;
+    }
+}
+
+/* CELULAR */
 @media (max-width: 600px) {
+
     .perfil {
         flex-direction: column;
         text-align: center;
     }
 
-    header p {
+    .contatos p {
         justify-content: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .titulo {
+        font-size: 14px;
     }
 }
 
+/* CELULAR PEQUENO */
 @media (max-width: 400px) {
     body {
         padding: 10px;
