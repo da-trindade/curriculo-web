@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo | Daniel da Trindade</title>
 
+    <!-- SEO (diferencial!) -->
+    <meta name="description" content="Currículo profissional de Daniel da Trindade, desenvolvedor web em formação">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Ícones -->
@@ -24,6 +27,15 @@
             <div>
                 <h1>Daniel da Trindade</h1>
                 <h3 class="titulo">Desenvolvedor Web em formação</h3>
+
+                <!-- MENU (NOVO) -->
+                <nav class="menu">
+                    <a href="#objetivo">Objetivo</a>
+                    <a href="#formacao">Formação</a>
+                    <a href="#experiencia">Experiência</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#habilidades">Habilidades</a>
+                </nav>
 
                 <nav class="contatos">
                     <p>
@@ -55,7 +67,7 @@
     <main class="container">
 
         <!-- OBJETIVO -->
-        <section class="card">
+        <section id="objetivo" class="card">
             <h2>Objetivo Profissional</h2>
             <p>
                 Busco minha primeira oportunidade na área de desenvolvimento web,
@@ -74,11 +86,11 @@
             </p>
         </section>
 
-        <!-- GRID (LAYOUT MAIS PROFISSIONAL) -->
+        <!-- GRID -->
         <div class="grid">
 
             <!-- FORMAÇÃO -->
-            <section class="card">
+            <section id="formacao" class="card">
                 <h2>Formação Acadêmica</h2>
                 <ul>
                     <li><strong>UNIFEBE</strong> – Sistemas de Informação (2026 - atual)</li>
@@ -87,18 +99,18 @@
             </section>
 
             <!-- IDIOMAS -->
-            <section class="card">
+            <aside class="card">
                 <h2>Idiomas</h2>
                 <ul>
                     <li>Português – Nativo</li>
                     <li>Inglês – Básico</li>
                 </ul>
-            </section>
+            </aside>
 
         </div>
 
         <!-- EXPERIÊNCIA -->
-        <section class="card">
+        <section id="experiencia" class="card">
             <h2>Experiência Profissional</h2>
 
             <article>
@@ -113,38 +125,47 @@
                     <li>Elaboração de defesas administrativas</li>
                 </ul>
             </article>
-
         </section>
 
         <!-- PROJETOS -->
-        <section class="card">
+        <section id="projetos" class="card">
             <h2>Projetos</h2>
 
             <article class="projeto">
                 <h3>Currículo Online</h3>
                 <p>
-                    Desenvolvimento de página web responsiva utilizando HTML, CSS e GitHub Pages
-                    para publicação. Aplicação de conceitos de layout moderno, responsividade e UX.
+                    Desenvolvimento de página web responsiva utilizando HTML, CSS e GitHub Pages.
+                    Aplicação de conceitos de layout moderno, Flexbox, variáveis CSS e responsividade.
                 </p>
 
                 <a href="https://da-trindade.github.io/curriculo-web/" target="_blank">
                     Ver projeto
                 </a>
             </article>
+        </section>
 
+        <!-- DIFERENCIAIS (NOVO) -->
+        <section class="card">
+            <h2>Diferenciais</h2>
+            <ul>
+                <li>Conhecimento em versionamento com Git e GitHub</li>
+                <li>Boas práticas de organização de código</li>
+                <li>Interesse em UX/UI e experiência do usuário</li>
+                <li>Facilidade em aprender novas tecnologias</li>
+            </ul>
         </section>
 
         <!-- HABILIDADES -->
-        <section class="card">
+        <section id="habilidades" class="card">
             <h2>Habilidades</h2>
 
             <div class="skills">
                 <span>HTML5</span>
                 <span>CSS3</span>
+                <span>Flexbox</span>
+                <span>Responsividade</span>
                 <span>Git</span>
                 <span>GitHub</span>
-                <span>Responsividade</span>
-                <span>Flexbox</span>
                 <span>Lógica de Programação</span>
                 <span>UX/UI básico</span>
             </div>
